@@ -8,7 +8,7 @@ function computerPlay() {   // Computer makes selection//
           case 2:
               return "SCISSORS";
           default:
-              alert(`Error`);
+              alert("Error");
                   break;
     }
 }

@@ -1,4 +1,4 @@
-function computerPlay() {
+function computerPlay() {   // Computer makes selection//
     let key = Math.floor(Math.random() * 3);
     switch (key) {
           case 0:
@@ -12,11 +12,7 @@ function computerPlay() {
                   break;
     }
 }
-
-
-
-
-function playerPlay() {
+function playerPlay() {     //Player makes selection//
    let playerMove= prompt("Please choose one. / Rock,Paper or Scissors");
    playerMove=playerMove.toUpperCase();
    if (playerMove=="ROCK") {
@@ -29,11 +25,7 @@ function playerPlay() {
      alert("Your selection is wrong!!")
    }
 }
-
-
-
-
-function playRound(playerSelection,computerSelection) {
+function playRound(playerSelection,computerSelection) {  // Computer and Player comparison//
     if (playerSelection==computerSelection) {
         return "DRAW";
    }
@@ -56,7 +48,7 @@ function playRound(playerSelection,computerSelection) {
 let computerSelection= "nothing"
 let playerSelection= "nothing"
 
-function game(playerSelection,computerSelection) {
+function game(playerSelection,computerSelection) { // MAIN GAME//
 let computerScore=0;
 let playerScore=0;
 for (let i = 0; i < 5; i++) {
@@ -65,8 +57,7 @@ for (let i = 0; i < 5; i++) {
     console.log("PlayerSelection is " +playerSelection);
     let computerSelection = computerPlay();
     console.log("ComputerSelection is " +computerSelection);
-    
-    //console.log("Round Winner " +playRound(playerSelection,computerSelection));//
+
     if (playRound(playerSelection,computerSelection) === true) {
         playerScore++;
         console.log(`Player won!      Player : ${playerScore} Computer : ${computerScore}`);
@@ -77,7 +68,7 @@ for (let i = 0; i < 5; i++) {
         console.log("DRAW!       Player : " + playerScore + " Computer : " + computerScore);
     }
 }
-   console.log("---------WİNNER------------")
+   console.log("---------WINNER------------")
    if (playerScore>computerScore) {
        console.log("Player WON!!!")
     } else if(playerScore<computerScore ){

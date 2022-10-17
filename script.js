@@ -53,6 +53,7 @@ for (let i = 0; i < 5; i++) {
     console.log("----------ROUND "+ (i+1) + "--------------")
     let playerSelection = playerPlay();
     while (playerSelection==1) {
+        alert("Invalid choose.Try it again.");
         playerSelection=playerPlay();
     }
     console.log("PlayerSelection is " +playerSelection);

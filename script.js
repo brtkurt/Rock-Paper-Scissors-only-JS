@@ -41,9 +41,7 @@ function playRound(playerSelection,computerSelection) {  // Computer and Player 
          if (computerSelection=="PAPER") return true;
          else return false;
    }
-   else if (playerSelection==computerSelection) {
-         return "DRAW";
-   }
+   
 }
 let computerSelection= "nothing"
 let playerSelection= "nothing"

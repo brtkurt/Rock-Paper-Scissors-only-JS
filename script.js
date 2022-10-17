@@ -22,7 +22,7 @@ function playerPlay() {     //Player makes selection//
    } else if (playerMove=="SCISSORS") {
       return playerMove;
    }else{
-     alert("Your selection is wrong!!")
+     return 1;
    }
 }
 function playRound(playerSelection,computerSelection) {  // Computer and Player comparison//
@@ -54,6 +54,9 @@ let playerScore=0;
 for (let i = 0; i < 5; i++) {
     console.log("----------ROUND "+ (i+1) + "--------------")
     let playerSelection = playerPlay();
+    while (playerSelection==1) {
+        playerSelection=playerPlay();
+    }
     console.log("PlayerSelection is " +playerSelection);
     let computerSelection = computerPlay();
     console.log("ComputerSelection is " +computerSelection);
